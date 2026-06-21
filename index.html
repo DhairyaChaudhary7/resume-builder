@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-circle circle-one"></div>
+  <div class="bg-circle circle-two"></div>
+
+  <header>
+    <div class="top-actions">
+      <button id="themeToggle" class="small-btn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="badge">Free Online Tool</div>
+    <h1>ATS Resume Builder</h1>
+    <p>Created by Dhairya Chaudhary | mail2dhairyachaudhary@gmail.com</p>
+
+    <a href="https://github.com/DhairyaChaudhary7" target="_blank" class="dh-btn">
+      Built your Resume with me
+    </a>
+  </header>
+
+  <main class="container">
+    <section class="form-box">
+      <h2>Build Your Resume</h2>
+      <p class="hint">Fill details and get instant ATS score + PDF resume.</p>
+
+      <label>Choose Template</label>
+      <select id="template">
+        <option value="classic">Classic</option>
+        <option value="modern">Modern</option>
+        <option value="minimal">Minimal</option>
+      </select>
+
+      <label>Upload Profile Photo</label>
+      <input type="file" id="photoUpload" accept="image/*" />
+
+      <input id="name" placeholder="Full Name" />
+      <input id="email" placeholder="Email" />
+      <input id="phone" placeholder="Phone Number" />
+      <input id="location" placeholder="Location" />
+      <input id="linkedin" placeholder="LinkedIn URL" />
+      <input id="github" placeholder="GitHub URL" />
+
+      <textarea id="summary" placeholder="Professional Summary"></textarea>
+
+      <div class="skill-box">
+        <input id="skillInput" placeholder="Add skill and press Add" />
+        <button type="button" onclick="addSkill()">Add Skill</button>
+      </div>
+
+      <div id="skillTags"></div>
+
+      <textarea id="education" placeholder="Education"></textarea>
+      <textarea id="projects" placeholder="Projects"></textarea>
+      <textarea id="experience" placeholder="Experience / Internship"></textarea>
+      <textarea id="certifications" placeholder="Certifications"></textarea>
+
+      <button onclick="generateResume()">Generate Resume</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+      <button onclick="clearForm()" class="clear">Clear Form</button>
+    </section>
+
+    <section class="preview-box">
+      <div class="preview-head">
+        <h2>Live Preview</h2>
+        <span id="progressText">0% Complete</span>
+      </div>
+
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+
+      <div class="ats-card">
+        <h3>ATS Score</h3>
+        <div class="score-circle">
+          <span id="atsScore">0</span>%
+        </div>
+        <p id="atsMessage">Start filling your resume details.</p>
+      </div>
+
+      <div id="resume" class="classic">
+        <h1>Your Name</h1>
+        <p>Email | Phone | Location</p>
+        <hr>
+
+        <h3>Professional Summary</h3>
+        <p>Your summary will appear here.</p>
+
+        <h3>Technical Skills</h3>
+        <p>Your skills will appear here.</p>
+
+        <h3>Education</h3>
+        <p>Your education will appear here.</p>
+
+        <h3>Projects</h3>
+        <p>Your projects will appear here.</p>
+
+        <h3>Experience</h3>
+        <p>Your experience will appear here.</p>
+
+        <h3>Certifications</h3>
+        <p>Your certifications will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="top-btn" onclick="scrollToTop()">↑</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
