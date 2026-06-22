@@ -184,6 +184,10 @@ textarea {
   resize: vertical;
 }
 
+#jobDescription {
+  min-height: 130px;
+}
+
 button {
   width: 100%;
   padding: 14px;
@@ -205,6 +209,10 @@ button:hover {
 
 .clear {
   background: #64748b;
+}
+
+.analyze-btn {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
 }
 
 .skill-box {
@@ -231,6 +239,58 @@ button:hover {
   border-radius: 999px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.analysis-box {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.analysis-box h3 {
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.analysis-box p {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+#matchedKeywords,
+#missingKeywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 14px;
+}
+
+.keyword {
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.keyword.match {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.keyword.missing {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+#atsTips {
+  padding-left: 20px;
+  color: var(--text);
+}
+
+#atsTips li {
+  margin-bottom: 6px;
 }
 
 .preview-head {
@@ -380,4 +440,38 @@ hr {
     align-items: flex-start;
     gap: 6px;
   }
+}
+.old-resume-box {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.old-resume-box h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+#oldResumeStatus {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.score-mini {
+  margin: 14px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.12);
+  font-weight: 800;
+  color: var(--primary);
+}
+
+#oldResumeTips {
+  padding-left: 20px;
+}
+
+#oldResumeTips li {
+  margin-bottom: 6px;
 }
